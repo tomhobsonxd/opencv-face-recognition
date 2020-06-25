@@ -85,6 +85,7 @@ while True:
 			# the face
 			box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
 			(startX, startY, endX, endY) = box.astype("int")
+			# print("Box Coordinates: X1: "+str(startX)+" Y1: "+str(startY)+" X2: "+str(endX)+" Y2: "+str(endY)+"\n")
 
 			# extract the face ROI
 			face = frame[startY:endY, startX:endX]
