@@ -1,0 +1,4 @@
+py extract_embeddings.py -i dataset -d face_detection_model/ -e output/embeddings.pickle -m openface_nn4.small2.v1.t7
+
+py train_model.py -e output/embeddings.pickle -r output/recognizer.pickle -l output/le.pickle
+
