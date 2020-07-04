@@ -19,41 +19,48 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="014bf7de-1498-46a6-92a3-5e7a67d7d2f8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/PCA9685_Test.py" afterDir="false" />
+    <list default="true" id="d92e3fef-eaf3-487b-b276-2ffa68913939" name="Default Changelist" comment="Added new python file">
+      <change beforePath="$PROJECT_DIR$/.idea (1)/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea (1)/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea (1)/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea (1)/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea (1)/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea (1)/opencv-face-recognition.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea (1)/opencv-face-recognition.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea (1)/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea (1)/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea (1)/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea (1)/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/opencv-face-recognition.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PCA9685_Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/PCA9685_Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/control_webcam_servo_motor.py" beforeDir="false" afterPath="$PROJECT_DIR$/control_webcam_servo_motor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1do5W4myH4LB2N79QFEcZCJ0a1T" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1doVZpYqXBhgIdSXkmccnga3znQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
-    <configuration name="recognize_video" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.PCA9685_Test">
+    <configuration name="PCA9685_Test" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="opencv-face-recognition" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -66,8 +73,8 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/recognize_video.py" />
-      <option name="PARAMETERS" value="--embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle -d face_detection_model" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PCA9685_Test.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -75,20 +82,58 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="extract_embeddings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="opencv-face-recognition" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/extract_embeddings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.PCA9685_Test" />
+        <item itemvalue="Python.extract_embeddings" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="014bf7de-1498-46a6-92a3-5e7a67d7d2f8" name="Default Changelist" comment="" />
-      <created>1593078633475</created>
+      <changelist id="d92e3fef-eaf3-487b-b276-2ffa68913939" name="Default Changelist" comment="" />
+      <created>1593091491107</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1593078633475</updated>
-      <workItem from="1593078634812" duration="352000" />
-      <workItem from="1593084987051" duration="3005000" />
+      <updated>1593091491107</updated>
+      <workItem from="1593091495561" duration="709000" />
+      <workItem from="1593115023226" duration="3451000" />
+      <workItem from="1593615307125" duration="4177000" />
+      <workItem from="1593809651936" duration="802000" />
     </task>
+    <task id="LOCAL-00001" summary="Added new python file">
+      <created>1593115058960</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593115058960</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,43 +149,44 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added new python file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new python file" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="294" y="295" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593085705195">
-      <screen x="0" y="23" width="1680" height="948" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593091577719">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="315" y="163" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.947@0.23.1680.947" timestamp="1593078903843" />
-    <state x="294" y="295" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1680.948@0.23.1680.948" timestamp="1593085705195" />
-    <state x="639" y="263" key="FileChooserDialogImpl" timestamp="1593085510610">
-      <screen x="0" y="23" width="1680" height="948" />
+    <state x="414" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593091577719" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom" timestamp="1593620252114">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="639" y="263" key="FileChooserDialogImpl/0.23.1680.948@0.23.1680.948" timestamp="1593085510610" />
-    <state width="1358" height="236" key="GridCell.Tab.0.bottom" timestamp="1593106077390">
-      <screen x="0" y="23" width="1680" height="948" />
+    <state width="1877" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593620252114" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center" timestamp="1593620252114">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1358" height="236" key="GridCell.Tab.0.bottom/0.23.1680.947@0.23.1680.947" timestamp="1593078909221" />
-    <state width="1358" height="236" key="GridCell.Tab.0.bottom/0.23.1680.948@0.23.1680.948" timestamp="1593106077390" />
-    <state width="1358" height="236" key="GridCell.Tab.0.center" timestamp="1593106077390">
-      <screen x="0" y="23" width="1680" height="948" />
+    <state width="1877" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593620252114" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left" timestamp="1593620252114">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1358" height="236" key="GridCell.Tab.0.center/0.23.1680.947@0.23.1680.947" timestamp="1593078909220" />
-    <state width="1358" height="236" key="GridCell.Tab.0.center/0.23.1680.948@0.23.1680.948" timestamp="1593106077390" />
-    <state width="1358" height="236" key="GridCell.Tab.0.left" timestamp="1593106077389">
-      <screen x="0" y="23" width="1680" height="948" />
+    <state width="1877" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593620252114" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right" timestamp="1593620252114">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1358" height="236" key="GridCell.Tab.0.left/0.23.1680.947@0.23.1680.947" timestamp="1593078909220" />
-    <state width="1358" height="236" key="GridCell.Tab.0.left/0.23.1680.948@0.23.1680.948" timestamp="1593106077389" />
-    <state width="1358" height="236" key="GridCell.Tab.0.right" timestamp="1593106077390">
-      <screen x="0" y="23" width="1680" height="948" />
+    <state width="1877" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593620252114" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1593091539671">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1358" height="236" key="GridCell.Tab.0.right/0.23.1680.947@0.23.1680.947" timestamp="1593078909221" />
-    <state width="1358" height="236" key="GridCell.Tab.0.right/0.23.1680.948@0.23.1680.948" timestamp="1593106077390" />
-    <state x="352" y="140" key="SettingsEditor" timestamp="1593085015773">
-      <screen x="0" y="23" width="1680" height="947" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593091539671" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2" timestamp="1593115063728">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="352" y="140" key="SettingsEditor/0.23.1680.947@0.23.1680.947" timestamp="1593085015773" />
+    <state x="552" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593115063728" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/opencv_face_recognition$recognize_video.coverage" NAME="recognize_video Coverage Results" MODIFIED="1593106077371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/opencv_face_recognition$extract_embeddings.coverage" NAME="extract_embeddings Coverage Results" MODIFIED="1593615772095" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/opencv_face_recognition$PCA9685_Test.coverage" NAME="PCA9685_Test Coverage Results" MODIFIED="1593615781789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

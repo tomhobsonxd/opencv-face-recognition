@@ -1,11 +1,8 @@
 import cv2
 import numpy as np
-from PCA9685 import PCA9685
+from adafruit_servokit import ServoKit
 
-pwm = PCA9685(0x40, debug=False)
-pwm.setPWMFreq(50)
-pwm.setServoPosition(0, 90)
-
+kit = ServoKit(channels=16)
 cap = cv2.VideoCapture(0)
 
 cap.set(3, 480)
@@ -14,9 +11,11 @@ cap.set(4, 320)
 _, frame = cap.read()
 rows, cols, _ = frame.shape
 
+kit.servo[0].angle = 90
 x_medium = int(cols / 2)
 center = int(cols / 2)
 position = 90 # degrees
+
 while True:
     _, frame = cap.read()
     hsv_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
@@ -49,8 +48,9 @@ while True:
         position += 1.5
     elif x_medium > center + 30:
         position -= 1.5
-        
-    pwm.setServoPosition(0, position)
+
+    print(str(position))
+    kit.servo[0].angle = position
     
 cap.release()
 cv2.destroyAllWindows()
