@@ -52,6 +52,13 @@ time.sleep(2.0)
 # start the FPS throughput estimator
 fps = FPS().start()
 
+# Setup the movement boundaries
+positionX = 90  # degrees
+positionY = 90  # degrees
+
+# kit.servo[0].angle = positionX
+# kit.servo[1].angle = positionY
+
 # loop over frames from the video file stream
 while True:
 	# grab the frame from the threaded video stream
@@ -62,6 +69,9 @@ while True:
 	# dimensions
 	frame = imutils.resize(frame, width=600)
 	(h, w) = frame.shape[:2]
+
+	centreX = w/2
+	centreY = h/2
 
 	# construct a blob from the image
 	imageBlob = cv2.dnn.blobFromImage(
@@ -85,7 +95,7 @@ while True:
 			# the face
 			box = detections[0, 0, i, 3:7] * np.array([w, h, w, h])
 			(startX, startY, endX, endY) = box.astype("int")
-			# print("Box Coordinates: X1: "+str(startX)+" Y1: "+str(startY)+" X2: "+str(endX)+" Y2: "+str(endY)+"\n")
+
 
 			# extract the face ROI
 			face = frame[startY:endY, startX:endX]
@@ -117,6 +127,35 @@ while True:
 				(0, 0, 255), 2)
 			cv2.putText(frame, text, (startX, y),
 				cv2.FONT_HERSHEY_SIMPLEX, 0.45, (0, 0, 255), 2)
+
+			# print("endX = " + str(endX) + "\n")
+			# print("Centre = " + str(centre) + "\n")
+
+			# Move servo motor for x-axis
+			if ((startX+endX)/2) < centreX - 30:
+				positionX += 1.5
+			elif ((startX+endX)/2) > centreX + 30:
+				positionX -= 1.5
+
+			# Move servo motor for y-axis
+			if ((startY + endY) / 2) < centreY - 30:
+				positionY += 1.5
+			elif ((startY + endY) / 2) > centreY + 30:
+				positionY -= 1.5
+
+			if positionX > 180:
+				positionX = 180
+			elif positionX < 0:
+				positionX = 0
+
+			if positionY > 180:
+				positionY = 180
+			elif positionY < 0:
+				positionY = 0
+
+			print("CamX: "+str(positionX)+" CamY: "+str(positionY))
+			# kit.servo[0].angle = position
+
 
 	# update the FPS counter
 	fps.update()
