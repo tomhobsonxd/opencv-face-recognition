@@ -53,12 +53,37 @@ time.sleep(2.0)
 fps = FPS().start()
 
 # Setup the movement boundaries
-positionX = 90  # degrees
-positionY = 90  # degrees
+# positionX = 90  # degrees
+# positionY = 90  # degrees
+
+def servoMove(x1,y1,x2,y2,cX,cY,posX,posY):
+	# Move servo motor for x-axis
+	if ((x1 + x2) / 2) < cX - 30:
+		posX += 1.5
+	elif ((x1 + x2) / 2) > cX + 30:
+		posX -= 1.5
+
+	# Move servo motor for y-axis
+	if ((y1 + y2) / 2) < cY - 30:
+		posY += 1.5
+	elif ((y1 + y2) / 2) > cY + 30:
+		posY -= 1.5
+
+	if posX > 180:
+		posX = 180
+	elif posX < 0:
+		posX = 0
+
+	if posY > 180:
+		posY = 180
+	elif posY < 0:
+		posY = 0
+
+	return [posX,posY]
 
 # kit.servo[0].angle = positionX
 # kit.servo[1].angle = positionY
-
+positionXY = [90,90]
 # loop over frames from the video file stream
 while True:
 	# grab the frame from the threaded video stream
@@ -131,30 +156,13 @@ while True:
 			# print("endX = " + str(endX) + "\n")
 			# print("Centre = " + str(centre) + "\n")
 
-			# Move servo motor for x-axis
-			if ((startX+endX)/2) < centreX - 30:
-				positionX += 1.5
-			elif ((startX+endX)/2) > centreX + 30:
-				positionX -= 1.5
+			# Check to see what name has been detected and decide if the servo values are going to be altered.
+			if name == "tom":
+				positionXY = servoMove(startX, startY, endX, endY, centreX, centreY, positionXY[0], positionXY[1])
 
-			# Move servo motor for y-axis
-			if ((startY + endY) / 2) < centreY - 30:
-				positionY += 1.5
-			elif ((startY + endY) / 2) > centreY + 30:
-				positionY -= 1.5
-
-			if positionX > 180:
-				positionX = 180
-			elif positionX < 0:
-				positionX = 0
-
-			if positionY > 180:
-				positionY = 180
-			elif positionY < 0:
-				positionY = 0
-
-			print("CamX: "+str(positionX)+" CamY: "+str(positionY))
+			print("CamX: "+str(positionXY[0])+" CamY: "+str(positionXY[1]))
 			# kit.servo[0].angle = position
+			print("There are: "+str(j+1)+" unique faces.")
 
 
 	# update the FPS counter
